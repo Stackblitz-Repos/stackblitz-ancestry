@@ -1,0 +1,53 @@
+{
+  "environments": [
+    {
+      "name": "development",
+      "endpoints": [
+        {
+          "resource": "AggregateRoot",
+          "baseUrl": "http://localhost:4300",
+          "url": "ancestries",
+          "versions": [
+            {
+              "verb": "default",
+              "value": "v1"
+            }
+          ]
+        },
+        {
+          "resource": "RootParent",
+          "baseUrl": "http://localhost:4300",
+          "url": "ancestries/:id/parents",
+          "versions": [
+            {
+              "verb": "default",
+              "value": "v1"
+            }
+          ]
+        },
+        {
+          "resource": "RootChild",
+          "baseUrl": "http://localhost:4300",
+          "url": "ancestries/:id/parents/:id/children",
+          "versions": [
+            {
+              "verb": "default",
+              "value": "v1"
+            }
+          ]
+        },
+        {
+          "resource": "RootGrandchild",
+          "baseUrl": "http://localhost:4300",
+          "url": "ancestries/:id/parents/:id/children/:id/grandchildren",
+          "versions": [
+            {
+              "verb": "default",
+              "value": "v1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
